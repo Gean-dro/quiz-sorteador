@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sorteador de perguntas">
+    <title>Quiz — Sorteador de Perguntas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">Q</span>
+                <span>QUIZ</span>
+            </div>
+
+            <span class="status">SORTEADOR DE PERGUNTAS</span>
+        </header>
+
+        <section class="game">
+
+            <div class="game-info">
+                <span>RODADA ATUAL</span>
+                <span id="remaining">100 PERGUNTAS DISPONÍVEIS</span>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>PROGRESSO DA PARTIDA</span>
+                    <span id="progress-text">0/5</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+
+                <span class="question-label">SEU TEMA</span>
+
+                <h1 id="question">
+                    Pronto para começar?
+                </h1>
+
+                <p id="question-number">
+                    Clique no botão abaixo para sortear.
+                </p>
+
+                <div class="answer-area" id="answer-area">
+                    <span>RESPOSTA</span>
+                    <p id="answer"></p>
+
+                <div id="score-actions" class="score-actions" style="display: none;">
+
+                    <button id="correct-button" class="correct-button">
+                        ✓ Acertei
+                    </button>
+
+                    <button id="wrong-button" class="wrong-button">
+                        ✕ Errei
+                    </button>
+
+                </div>
+
+                </div>
+
+            </div>
+
+            <div class="actions">
+
+                <button id="reveal-button" class="secondary-button" disabled>
+                    Revelar resposta
+                </button>
+
+                <button id="draw-button" class="primary-button">
+                    Sortear pergunta
+                </button>
+
+                <button id="reset-button" class="secondary-button">
+                    Nova partida
+                </button>
+
+            </div>
+
+            <div class="score-display">
+                <span>PONTUAÇÃO</span>
+                <strong id="score">0</strong>
+            </div>
+
+        </section>
+
+        
+
+<!-- TELA DE PARTIDA CONCLUÍDA -->
+
+        <section id="end-screen" class="end-screen" style="display: none;">
+
+            <div class="trophy-icon">🏆</div>
+
+            <h2>Parabéns!</h2>
+
+            <h3>Você concluiu a partida!</h3>
+
+            <p id="final-message">
+                Todas as perguntas foram sorteadas.
+            </p>
+
+            <span class="finished-badge">
+                PARTIDA CONCLUÍDA
+            </span>
+
+            <button id="play-again-button">
+                JOGAR NOVAMENTE
+            </button>
+
+        </section>
+
+        <footer class="footer">
+            QUIZ SORTEADOR · 2026
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

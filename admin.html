@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel administrativo do Quiz">
+    <title>Administração — Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container admin-container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">Q</span>
+                <span>QUIZ <small>ADMIN</small></span>
+            </div>
+
+            <a href="index.html" class="back-link">
+                ← Voltar ao jogo
+            </a>
+        </header>
+
+        <section class="admin-content">
+
+            <div class="admin-heading">
+                <span class="question-label">GERENCIAMENTO</span>
+                <h1>Banco de perguntas</h1>
+                <p>Cadastre e organize as perguntas do seu jogo.</p>
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <span>Total de perguntas</span>
+                    <strong id="total-questions">0</strong>
+                </div>
+            </div>
+
+            <section class="admin-form-card">
+
+                <h2 id="form-title">Cadastrar pergunta</h2>
+
+                <form id="question-form">
+
+                    <div class="form-group">
+                        <label for="question-input">Pergunta</label>
+                        <textarea
+                            id="question-input"
+                            placeholder="Digite a pergunta..."
+                            rows="3"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="answer-input">Resposta</label>
+                        <textarea
+                            id="answer-input"
+                            placeholder="Digite a resposta..."
+                            rows="3"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="primary-button">
+                            Salvar pergunta
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancel-edit"
+                            class="secondary-button"
+                            hidden
+                        >
+                            Cancelar edição
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+
+            <section class="admin-list-section">
+
+                <div class="list-heading">
+                    <h2>Perguntas cadastradas</h2>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Pesquisar pergunta..."
+                    >
+                </div>
+
+                <div id="questions-list" class="questions-list">
+                    <!-- Perguntas carregadas pelo JavaScript -->
+                </div>
+
+                <p id="empty-message" class="empty-message" hidden>
+                    Nenhuma pergunta cadastrada.
+                </p>
+
+            </section>
+
+        </section>
+
+        <footer class="footer">
+            QUIZ SORTEADOR · ADMINISTRAÇÃO
+        </footer>
+
+    </main>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
